@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-class API {
+class WalmartAPI {
     apiKey = "gy2n8uu9mu5ndzwbedv4k8kk";
 
     search(query){
@@ -42,7 +42,7 @@ class API {
         return new Promise((resolve, reject) => {
             axios
                 .get(url).then( response => {
-                    if(response.data && response.data){
+                    if(response && response.data){
                         resolve(response.data);
                     }
                 }, error =>{
@@ -53,4 +53,4 @@ class API {
     }
 }
 
-export default new API();
+export default new WalmartAPI();

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import API from '../../api/walmart.api.js';
+import WalmartAPI from '../../api/walmart.api.js';
 
 import Container from 'muicss/lib/react/container';
 import Row from 'muicss/lib/react/row';
@@ -35,7 +35,7 @@ class Search extends Component {
     }
 
     search(term){
-        API.search(term).then(results => {
+        WalmartAPI.search(term).then(results => {
             this.setState({
                 searchResults : results
             });
@@ -50,7 +50,7 @@ class Search extends Component {
                 <Row>
                     {this.state.searchResults.map(item => {
                         return (<Col xs={12} sm={12} md={6} lg={4}>
-                            <ItemSummary item={item} onItemClick={this.props.onItemClick}/>
+                            <ItemSummary item={item} onItemClick={this.props.onItemClick} key={item.itemId}/>
                         </Col>)
                     })}
                 </Row>

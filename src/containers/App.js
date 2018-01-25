@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Header from './Header/Header';
 import Search from './Search/Search';
+import Details from './Details/Details';
 
 class App extends Component {
   constructor(props){
@@ -26,7 +27,6 @@ class App extends Component {
   }
   
   onItemClick(itemID){
-    debugger;
     this.setState({
       searchMode : false,
       itemID : itemID
@@ -40,7 +40,7 @@ class App extends Component {
         <Header onSearch={this.onSearch}/>
         { this.state.searchMode ?
           <Search onItemClick={this.onItemClick} searchTerm={this.state.searchTerm}/>
-            : <div>test</div>
+            : <Details onItemClick={this.onItemClick} itemID={this.state.itemID}/>
         }
       </div>
     );

@@ -1,10 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// muicss componnets
 import Container from 'muicss/lib/react/container';
 import Panel from 'muicss/lib/react/panel';
 import Row from 'muicss/lib/react/row';
 import Col from 'muicss/lib/react/col';
+
+// custom components
+import Image from './Image';
 
 class ItemSummary extends React.Component {
     constructor(props){
@@ -22,16 +26,13 @@ class ItemSummary extends React.Component {
             <Panel onClick={this.onItemClick}>
                 <Container>
                     <Row>
-                        {this.props.item.name}
+                        <div>{this.props.item.name}</div>
                     </Row>
                     <Row>
-                        <img src={this.props.item.customerRatingImage}/>{this.props.item.customerRating}
+                        <Image src={this.props.item.customerRatingImage}/>${this.props.item.salePrice}
                     </Row>
                     <Row>
-                        <img src={this.props.item.thumbnailImage}/>
-                    </Row>
-                    <Row>
-                        {/*{item.shortDescription}*/}
+                        <Image fullwidth src={this.props.item.mediumImage}/>
                     </Row>
                 </Container>
             </Panel>
@@ -46,3 +47,11 @@ ItemSummary.propTypes = {
 };
 
 export default ItemSummary;
+
+
+/*
+                    <Row className="mui--hidden-xs mui--hidden-sm">
+                        {this.props.item.shortDescription}
+                    </Row>
+
+ */
