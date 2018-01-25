@@ -10,6 +10,7 @@ import WalmartAPI from '../../api/walmart.api.js';
 import Carousel from '../../components/Carousel';
 import ItemSummary from '../../components/ItemSummary';
 import ImageSwitcher from '../../components/ImageSwitcher';
+import Image from '../../components/Image';
 
 class Details extends Component {
     constructor(props){
@@ -58,8 +59,21 @@ class Details extends Component {
         return (
             <Container>
                 <Row>
+                    <Row>{this.state.itemDetails.name}</Row>
+                    <Row>by {this.state.itemDetails.brandName}</Row>
+                    <Row><Image src={this.state.itemDetails.customerRatingImage}/> {this.state.itemDetails.customerRating} {this.state.itemDetails.numReviews} reviews</Row>
+                </Row>
+                <Row>
                     <Col xs={12} sm={12} md={6} lg={4} xl={4} lg-offset={1} xl-offset={1}>
                         <ImageSwitcher images={this.state.itemDetails.imageEntities}/>
+                    </Col>
+                    <Col xs={12} sm={12} md={6} lg={4} xl={4} lg-offset={1} xl-offset={1}>
+                        <Row>
+
+                        </Row>
+                        msrp, salePrice
+                        //price, buy button, and details
+                        // addToCartUrl
                     </Col>
                 </Row>
                 <Row>
@@ -68,7 +82,9 @@ class Details extends Component {
                 <Row>
                     <Carousel>
                         {this.state.recommendedItems.map(item => {
-                            return (<ItemSummary item={item} onItemClick={this.props.onItemClick} key={item.itemId}/>);
+                            return(<Col xs={12} sm={12} md={4} lg={4} xl={4}>
+                                <ItemSummary item={item} onItemClick={this.props.onItemClick} key={item.itemId}/>
+                            </Col>);
                         })}
                     </Carousel>
                 </Row>
