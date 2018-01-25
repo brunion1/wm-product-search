@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// muicss componnets
+// muicss components
 import Container from 'muicss/lib/react/container';
 import Panel from 'muicss/lib/react/panel';
 import Row from 'muicss/lib/react/row';

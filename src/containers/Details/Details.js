@@ -9,6 +9,7 @@ import WalmartAPI from '../../api/walmart.api.js';
 
 import Carousel from '../../components/Carousel';
 import ItemSummary from '../../components/ItemSummary';
+import ImageSwitcher from '../../components/ImageSwitcher';
 
 class Details extends Component {
     constructor(props){
@@ -57,10 +58,12 @@ class Details extends Component {
         return (
             <Container>
                 <Row>
-
+                    <Col xs={12} sm={12} md={6} lg={4} xl={4} lg-offset={1} xl-offset={1}>
+                        <ImageSwitcher images={this.state.itemDetails.imageEntities}/>
+                    </Col>
                 </Row>
                 <Row>
-                    <div className="mui--text-center">Recommended Products</div>
+                    <div className="mui--text-center">You may also like...</div>
                 </Row>
                 <Row>
                     <Carousel>
