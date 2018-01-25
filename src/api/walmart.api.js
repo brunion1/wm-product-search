@@ -10,7 +10,7 @@ class API {
             axios
                 .get(url).then( response => {
                     if(response.data && response.data){
-                        resolve(response.data);
+                        resolve(response.data.items);
                     }
                 }, error => {
                     reject();
@@ -53,4 +53,4 @@ class API {
     }
 }
 
-export default API;
+export default new API();
