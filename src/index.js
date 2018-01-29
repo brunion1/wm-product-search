@@ -2,14 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Switch, Route } from 'react-router-dom';
 
-import './styles/walmart-colors.css'; //compiled stylesheet with walmart colors
+import './styles/walmart-colors.css'; //compiled stylesheet with Walmart colors
 import registerServiceWorker from './registerServiceWorker';
 
-import Search from './containers/Search/Search';
-import Details from './containers/Details/Details';
+//our two views
+import Search from './containers/Search/Search'; //allows for searching and displays a tiled list of results
+import Details from './containers/Details/Details'; //displays detailed item info and recommendations
 
+//for allowing us to manipulate the history object from anywhere
 import history from './utils/history';
 
+//app initialization and bootstrapping
 class App extends React.Component {
     constructor(props){
         super(props);

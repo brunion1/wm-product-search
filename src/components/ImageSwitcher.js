@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// muicss componnets
+// muicss components
 import Container from 'muicss/lib/react/container';
-import Panel from 'muicss/lib/react/panel';
 import Row from 'muicss/lib/react/row';
 import Col from 'muicss/lib/react/col';
 
@@ -18,7 +17,7 @@ class ImageSwitcher extends React.Component {
         this.filterImages = this.filterImages.bind(this);
 
         this.state = {
-            activeImage : {},
+            activeImage : {}, //big image
             images : []
         };
     }
@@ -28,6 +27,11 @@ class ImageSwitcher extends React.Component {
     }
 
     filterImages(nextProps){
+        /*
+            Build a "more" option and allowing users to select between 10+ images is a bit out of scope.
+            This pulls the first four images, then pushes the Primary image first.
+         */
+
         if(nextProps.images.length > 0){
             let primary = nextProps.images.filter( image => {
                 return image.entityType === "PRIMARY";
@@ -38,7 +42,7 @@ class ImageSwitcher extends React.Component {
             //keep it, we'll want to show it
             images.push(primary);
 
-            //pull 4 secondary images from the stack
+            //pull 3 secondary images from the stack
             for(var image of nextProps.images){
                 if(image !== primary){
                     images.push(image);

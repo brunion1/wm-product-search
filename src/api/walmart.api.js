@@ -1,5 +1,9 @@
 import axios from 'axios';
-
+/*
+    Contains the Walmart APIs for searching, getting detailed info, and recommendations.
+    Also allows for some minor error handling and ensuring that Axios doesn't send back
+    anything but the data we need in our components.
+ */
 class WalmartAPI {
     apiKey = "gy2n8uu9mu5ndzwbedv4k8kk";
 
