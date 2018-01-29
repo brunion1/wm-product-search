@@ -10,6 +10,7 @@ import ImageSwitcher from '../../components/ImageSwitcher';
 import Image from '../../components/Image';
 import Header from '../Header/Header';
 import Recommendations from '../../components/Recommendations';
+import LoadingSpinner from '../../components/LoadingSpinner';
 
 class Details extends Component {
     constructor(props){
@@ -42,7 +43,6 @@ class Details extends Component {
             itemId : itemId
         });
 
-        //firing off both simultaneously for now -- will update later
         WalmartAPI
             .getDetails(itemId)
             .then(itemDetails => {
@@ -57,27 +57,25 @@ class Details extends Component {
         return (
             <div>
                 <Header searchMode={false} headerText={this.props.match.params.itemId}/>
-                {!this.state.isLoading && this.state.itemId ?
-                    <Container>
-                        <Row>
-                            <Row>{this.state.itemDetails.name}</Row>
-                            <Row>by {this.state.itemDetails.brandName}</Row>
-                            <Row><Image src={this.state.itemDetails.customerRatingImage}/> {this.state.itemDetails.customerRating} {this.state.itemDetails.numReviews} reviews</Row>
-                        </Row>
-                        <Row>
-                            <Col xs={12} sm={12} md={6} lg={4} xl={4} lg-offset={1} xl-offset={1}>
-                                {/*<ImageSwitcher images={this.state.itemDetails.imageEntities}/>*/}
-                            </Col>
-                            <Col xs={12} sm={12} md={6} lg={4} xl={4} lg-offset={1} xl-offset={1}>
-                                <Row></Row>
-                                msrp, salePrice
-                                //price, buy button, and details
-                                // addToCartUrl
-                            </Col>
-                        </Row>
-                    </Container>
-                    :
-                    <div>...loading </div>
+                {!this.state.isLoading ? <Container>
+                    <Row>
+                        <Row>{this.state.itemDetails.name}</Row>
+                        <Row>by {this.state.itemDetails.brandName}</Row>
+                        <Row><Image src={this.state.itemDetails.customerRatingImage}/> {this.state.itemDetails.customerRating} {this.state.itemDetails.numReviews} reviews</Row>
+                    </Row>
+                    <Row>
+                        <Col xs={12} sm={12} md={6} lg={4} xl={4} lg-offset={1} xl-offset={1}>
+                            <ImageSwitcher images={this.state.itemDetails.imageEntities}/>
+                        </Col>
+                        <Col xs={12} sm={12} md={6} lg={4} xl={4} lg-offset={1} xl-offset={1}>
+                            <Row></Row>
+                            msrp, salePrice
+                            //price, buy button, and details
+                            // addToCartUrl
+                        </Col>
+                    </Row>
+                </Container>
+                : <LoadingSpinner visible={this.state.isLoading}/>
                 }
                 <Recommendations itemId={this.state.itemId}/>
             </div>

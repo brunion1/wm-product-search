@@ -9,8 +9,6 @@ import Col from 'muicss/lib/react/col';
 import Row from 'muicss/lib/react/row';
 import Input from 'muicss/lib/react/input';
 
-import history from '../../utils/history';
-
 class Header extends Component {
     constructor(props){
         super(props);

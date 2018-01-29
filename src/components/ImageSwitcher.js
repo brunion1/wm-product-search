@@ -15,6 +15,7 @@ class ImageSwitcher extends React.Component {
         super(props);
 
         this.viewImage = this.viewImage.bind(this);
+        this.filterImages = this.filterImages.bind(this);
 
         this.state = {
             activeImage : {},
@@ -23,31 +24,36 @@ class ImageSwitcher extends React.Component {
     }
 
     componentWillReceiveProps(nextProps){
-        //pull the primary image from array
-        let primary = nextProps.images.filter( image => {
-            return image.entityType === "PRIMARY";
-        })[0];
+        this.filterImages(nextProps);
+    }
 
-        let images = [];
+    filterImages(nextProps){
+        if(nextProps.images.length > 0){
+            let primary = nextProps.images.filter( image => {
+                return image.entityType === "PRIMARY";
+            })[0];
 
-        //keep it, we'll want to show it
-        images.push(primary);
+            let images = [];
 
-        //pull 4 secondary images from the stack
-        for(var image of nextProps.images){
-            if(image !== primary){
-                images.push(image);
+            //keep it, we'll want to show it
+            images.push(primary);
+
+            //pull 4 secondary images from the stack
+            for(var image of nextProps.images){
+                if(image !== primary){
+                    images.push(image);
+                }
+                if(images.length === 4){
+                    break;
+                }
             }
-            if(images.length === 4){
-                break;
-            }
+
+            // set the active image
+            this.setState({
+                images : images,
+                activeImage: images[0]
+            });
         }
-
-        // set the active image
-        this.setState({
-            images : images,
-            activeImage: images[0]
-        });
     }
 
     viewImage(image){
@@ -65,8 +71,8 @@ class ImageSwitcher extends React.Component {
                 <Row>
                     {this.state.images.map((image, index)=> {
                         return (
-                            <Col xs={3} sm={3} md={3} lg={3} xl={3}>
-                                <Image src={image.thumbnailImage} key={index} onClick={()=>{this.viewImage(image)}}/>
+                            <Col xs={3} sm={3} md={3} lg={3} xl={3} key={index} >
+                                <Image src={image.thumbnailImage} onClick={()=>{this.viewImage(image)}}/>
                             </Col>
                         )
                     })}
@@ -78,7 +84,7 @@ class ImageSwitcher extends React.Component {
 
 
 ImageSwitcher.propTypes = {
-    images : PropTypes.array.isRequired
+    images : PropTypes.array
 };
 
 ImageSwitcher.defaultProps = {

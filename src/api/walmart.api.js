@@ -43,9 +43,14 @@ class WalmartAPI {
             axios
                 .get(url).then( response => {
                     if(response && response.data){
-                        resolve(response.data);
+                        if(response.data.errors) {
+                            reject();
+                        }
+                        else{
+                            resolve(response.data);
+                        }
                     }
-                }, error =>{
+                }, error => {
                     reject();
                     console.log(error);
                 });

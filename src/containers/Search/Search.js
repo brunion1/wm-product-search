@@ -8,6 +8,7 @@ import Col from 'muicss/lib/react/col';
 
 import Header from '../Header/Header';
 import ItemSummary from '../../components/ItemSummary';
+import LoadingSpinner from '../../components/LoadingSpinner';
 
 class Search extends Component {
     constructor(props){
@@ -49,6 +50,7 @@ class Search extends Component {
                             </Col>)
                         })}
                     </Row>
+                    <LoadingSpinner visible={this.state.isLoading}/>
                 </Container>
             </div>
         );

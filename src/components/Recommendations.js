@@ -10,6 +10,7 @@ import WalmartAPI from '../api/walmart.api.js';
 
 import Carousel from './Carousel';
 import ItemSummary from './ItemSummary';
+import LoadingSpinner from './LoadingSpinner';
 
 class Recommendations extends React.Component {
     constructor(props){
@@ -19,12 +20,9 @@ class Recommendations extends React.Component {
 
         this.state = {
             isLoading : false,
-            recommendedItems : []
+            recommendedItems : [],
+            noValidItems : false
         }
-    }
-
-    componentDidMount(){
-        this.fetchRecommendations();
     }
 
     componentWillReceiveProps(){
@@ -41,6 +39,11 @@ class Recommendations extends React.Component {
                     isLoading : false,
                     recommendedItems: recommendedItems
                 });
+            }, () => {
+                this.setState({
+                    noValidItems : true,
+                    isLoading : false
+                });
             });
     }
 
@@ -51,24 +54,24 @@ class Recommendations extends React.Component {
                     <div className="mui--text-center">You may also like...</div>
                 </Row>
                 <Row>
-                    {this.state.isLoading ? <div>...loading</div>
-                        :
+                    {this.state.noValidItems && !this.state.isLoading ?
                         <Carousel>
-                            {this.state.recommendedItems.map(item => {
-                                return(<Col xs={12} sm={12} md={4} lg={4} xl={4}>
-                                    <ItemSummary item={item} key={item.itemId}/>
+                            {this.state.recommendedItems.map((item, index) => {
+                                return(<Col xs={12} sm={12} md={4} lg={4} xl={4} key={item.itemId}>
+                                    <ItemSummary item={item}/>
                                 </Col>);
                             })}
                         </Carousel>
+                        :
+                        <Col xs={12} sm={12} md={8} lg={8} lg-offset={2} md-offset={2}>
+                            Sorry, no recommendations available for this item.
+                        </Col>
                     }
+                    <LoadingSpinner visible={this.state.isLoading}/>
                 </Row>
             </Container>
         )
     }
 }
-
-Recommendations.propTypes = {
-    itemId : PropTypes.number.isRequired
-};
 
 export default Recommendations;
