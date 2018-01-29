@@ -15,6 +15,7 @@ import Image from '../../components/Image';
 import Header from '../../components/Header';
 import Recommendations from '../../components/Recommendations';
 import LoadingSpinner from '../../components/LoadingSpinner';
+import Divider from '../../components/Divider';
 
 class Details extends React.Component {
     constructor(props){
@@ -63,28 +64,38 @@ class Details extends React.Component {
         return (
             <div>
                 <Header searchMode={false} headerText={this.props.match.params.itemId}/>
-                <Container>
+                <Container className="extra-margin">
                     <Row>
-                        <Row><div className="mui--text-headline">{this.state.itemDetails.name}</div></Row>
-                        <Row>by {this.state.itemDetails.brandName}</Row>
-                        <Row><Image src={this.state.itemDetails.customerRatingImage}/> {this.state.itemDetails.customerRating} {this.state.itemDetails.numReviews} reviews</Row>
+                        <Row>
+                            <Col xs={10} sm={10} md={10} xs-offset={1} sm-offset={1} md-offset={1}>
+                                <span className="mui--text-headline">{this.state.itemDetails.name}</span> by {this.state.itemDetails.brandName}
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col xs={10} sm={10} md={10} xs-offset={1} sm-offset={1} md-offset={1}>
+                                 <Image src={this.state.itemDetails.customerRatingImage}/> {this.state.itemDetails.customerRating} {this.state.itemDetails.numReviews} reviews
+                            </Col>
+                        </Row>
                     </Row>
-                    <Row>
-                        <Col xs={12} sm={12} md={6} lg={4} xl={4} lg-offset={1} xl-offset={1}>
+                    <Row className="extra-margin">
+                        <Col xs={8} sm={8} md={4} lg={4} xl={4} xs-offset={2} sm-offset={2} md-offset={1} lg-offset={1} xl-offset={1} className="extra-margin">
                             <ImageSwitcher images={this.state.itemDetails.imageEntities}/>
                         </Col>
                         <Col xs={12} sm={12} md={6} lg={4} xl={4} lg-offset={1} xl-offset={1}>
-                            <Row>
-                                <Col xs={12} sm={12} md={4} lg={4} xl={4} lg-offset={1} xl-offset={1}>
-                                    {this.state.itemDetails.salePrice}<br/>
+                            <Row className="extra-margin">
+                                <Col xs={12} sm={12} md={4} lg={4} xl={4}>
+                                    <div className="mui--text-subhead">{this.state.itemDetails.salePrice}</div>
                                     {this.state.itemDetails.msrp}
                                 </Col>
-                                <Col xs={12} sm={12} md={8} lg={4} xl={4} lg-offset={1} xl-offset={1}>
+                                <Col xs={12} sm={12} md={8} lg={8} xl={8}>
                                     <Button color="primary">Add To Cart</Button>
                                 </Col>
                             </Row>
-                            <Row>
-                                {this.state.itemDetails.shortDescription}
+                            <Row className="extra-margin">
+                                <Divider/>
+                                <Col xs={12} sm={12} md={12} lg={12} xl={12}>
+                                    {this.state.itemDetails.shortDescription}
+                                </Col>
                             </Row>
                         </Col>
                     </Row>

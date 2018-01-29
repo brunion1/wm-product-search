@@ -30,7 +30,7 @@ class Recommendations extends React.Component {
     }
 
     fetchRecommendations(){
-        this.setState({ isLoading: true });
+        this.setState({ isLoading: true, recommendedItems : [] });
 
         WalmartAPI
             .getRecommendations(this.props.itemId)
@@ -51,10 +51,10 @@ class Recommendations extends React.Component {
         return(
             <Container>
                 <Row>
-                    <div className="mui--text-center">You may also like...</div>
+                    <div className="mui--text-title mui--text-center">You may also like...</div>
                 </Row>
                 <Row>
-                    {this.state.noValidItems && !this.state.isLoading ?
+                    {!this.state.isLoading ?
                         <Carousel>
                             {this.state.recommendedItems.map((item, index) => {
                                 return(<Col xs={10} sm={10} md={6} lg={3} xl={3} key={item.itemId}>
@@ -62,10 +62,7 @@ class Recommendations extends React.Component {
                                 </Col>);
                             })}
                         </Carousel>
-                        :
-                        <Col xs={12} sm={12} md={8} lg={8} lg-offset={2} md-offset={2}>
-                            Sorry, no recommendations available for this item.
-                        </Col>
+                        : null
                     }
                     <LoadingSpinner visible={this.state.isLoading}/>
                 </Row>
@@ -75,3 +72,12 @@ class Recommendations extends React.Component {
 }
 
 export default Recommendations;
+
+//
+// {this.state.noValidItems && !this.state.isLoading ?
+//
+//                     :
+//                     <Col xs={12} sm={12} md={8} lg={8} lg-offset={2} md-offset={2}>
+//                         Sorry, no recommendations available for this item.
+//                     </Col>
+//                     }

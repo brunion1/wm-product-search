@@ -42,7 +42,7 @@ class Search extends Component {
         return (
             <div>
                 <Header onSearch={this.search} searchMode={true}/>
-                <Container>
+                <Container className="extra-margin">
                     <Row>
                         {this.state.searchResults.map(item => {
                             return (<Col xs={12} sm={12} md={6} lg={4}>

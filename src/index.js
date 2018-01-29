@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Router, Switch, Route } from 'react-router-dom';
 
 import './styles/walmart-colors.css'; //compiled stylesheet with Walmart colors
+import './styles/app.css'; //app-wide util classes
 import registerServiceWorker from './registerServiceWorker';
 
 //our two views

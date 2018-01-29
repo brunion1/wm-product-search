@@ -1,13 +1,22 @@
+//core react stuff
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
+//muicss components
 import Form from 'muicss/lib/react/form';
 import Container from 'muicss/lib/react/container'
 import Appbar from 'muicss/lib/react/appbar';
 import Col from 'muicss/lib/react/col';
 import Row from 'muicss/lib/react/row';
 import Input from 'muicss/lib/react/input';
+import Button from 'muicss/lib/react/button';
+
+//custom components
+import Image from './Image';
+
+//assets
+import logo from '../images/walmart.png';
 
 class Header extends Component {
     constructor(props){
@@ -49,7 +58,7 @@ class Header extends Component {
                             :
                             <Row>
                                 <Col xs={2} sm={2} md={2} lg={2} xl={2}>
-                                    <Link to={"/"}>Back</Link>
+                                    <Link to={"/"}><Button variant="flat" >Back</Button></Link>
                                 </Col>
                                 <Col xs={8} sm={8} md={8} lg={8} xl={8}>
                                     <div>{this.props.headerText}</div>
