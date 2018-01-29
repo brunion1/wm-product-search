@@ -13,6 +13,10 @@ const LoadingSpinner = (props) => {
 };
 
 export default styled(LoadingSpinner)`
-  display:block;
-  margin:auto;
+    display:block;
+    margin:auto;
+    margin-top: 10%;
+    @media only screen and (max-width : 480px) {
+        width:25%;
+    }
 `;

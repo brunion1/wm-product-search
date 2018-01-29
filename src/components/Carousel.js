@@ -12,7 +12,6 @@ const Carousel = styled.div`
     }
 
     > div {
-      max-width:40%;
       margin: 3%;
       flex: 0 0 auto;
     }
