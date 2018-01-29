@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b335b016-8f20-4019-b811-49248addbb6a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/api/walmart.api.js" afterPath="$PROJECT_DIR$/src/api/walmart.api.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/ImageSwitcher.js" afterPath="$PROJECT_DIR$/src/components/ImageSwitcher.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Recommendations.js" afterPath="$PROJECT_DIR$/src/components/Recommendations.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/App.js" afterPath="$PROJECT_DIR$/src/containers/App.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Details/Details.js" afterPath="$PROJECT_DIR$/src/containers/Details/Details.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Header/Header.js" afterPath="$PROJECT_DIR$/src/containers/Header/Header.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Search/Search.js" afterPath="$PROJECT_DIR$/src/containers/Search/Search.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -58,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Details.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Details.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/containers/Details/Details.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1170">
-              <caret line="78" column="17" lean-forward="false" selection-start-line="78" selection-start-column="17" selection-end-line="78" selection-end-column="17" />
+            <state relative-caret-position="820">
+              <caret line="70" column="42" lean-forward="true" selection-start-line="70" selection-start-column="42" selection-end-line="70" selection-end-column="42" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -83,7 +77,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="walmart.api.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="walmart.api.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/api/walmart.api.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="249">
@@ -133,7 +127,7 @@
       <file leaf-file-name="ImageSwitcher.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/ImageSwitcher.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
+            <state relative-caret-position="375">
               <caret line="29" column="28" lean-forward="true" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
               <folding />
             </state>
@@ -171,11 +165,11 @@
         <option value="$PROJECT_DIR$/src/containers/App.js" />
         <option value="$PROJECT_DIR$/src/components/ImageSwitcher.js" />
         <option value="$PROJECT_DIR$/src/components/LoadingSpinner.js" />
-        <option value="$PROJECT_DIR$/src/containers/Details/Details.js" />
         <option value="$PROJECT_DIR$/src/containers/Search/Search.js" />
         <option value="$PROJECT_DIR$/src/containers/Header/Header.js" />
         <option value="$PROJECT_DIR$/src/api/walmart.api.js" />
         <option value="$PROJECT_DIR$/src/components/Recommendations.js" />
+        <option value="$PROJECT_DIR$/src/containers/Details/Details.js" />
       </list>
     </option>
   </component>
@@ -234,18 +228,6 @@
               <item name="wm-product-search" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="wm-product-search" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wm-product-search" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wm-product-search" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wm-product-search" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -287,12 +269,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1516890325952</updated>
-      <workItem from="1516890328142" duration="36942000" />
+      <workItem from="1516890328142" duration="37288000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36942000" />
+    <option name="totallyTimeSpent" value="37288000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1148" y="-1058" width="1920" height="978" extended-state="0" />
@@ -468,26 +450,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/Details/Details.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="78" column="17" lean-forward="false" selection-start-line="78" selection-start-column="17" selection-end-line="78" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/Header/Header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/Search/Search.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -498,29 +460,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/walmart-colors.scss">
+    <entry file="file://$PROJECT_DIR$/src/containers/Header/Header.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Recommendations.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="56" column="69" lean-forward="false" selection-start-line="56" selection-start-column="69" selection-end-line="56" selection-end-column="69" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#85#136#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -552,8 +495,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ImageSwitcher.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
+        <state relative-caret-position="375">
           <caret line="29" column="28" lean-forward="true" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/walmart-colors.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -563,6 +524,27 @@
         <state relative-caret-position="249">
           <caret line="48" column="26" lean-forward="false" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Recommendations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="56" column="69" lean-forward="false" selection-start-line="56" selection-start-column="69" selection-end-line="56" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#85#136#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/Details/Details.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="820">
+          <caret line="70" column="42" lean-forward="true" selection-start-line="70" selection-start-column="42" selection-end-line="70" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

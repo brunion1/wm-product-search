@@ -6,7 +6,7 @@ import Container from 'muicss/lib/react/container';
 import Row from 'muicss/lib/react/row';
 import Col from 'muicss/lib/react/col';
 
-import Header from '../Header/Header';
+import Header from '../../components/Header';
 import ItemSummary from '../../components/ItemSummary';
 import LoadingSpinner from '../../components/LoadingSpinner';
 
