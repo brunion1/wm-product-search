@@ -31,16 +31,15 @@ class Search extends Component {
         }
     }
 
-    componentWillReceiveProps(nextProps){
-        //if new props are received, make sure we're not somehow looking at the same object
-        if(nextProps.match.params.searchTerm !== this.props.match.params.searchTerm) {
-            this.search(nextProps.match.params.searchTerm);
+    componentDidUpdate(prevProps, prevState){
+        if(prevProps.match.params.searchTerm !== this.props.match.params.searchTerm){
+            this.search(this.props.match.params.searchTerm);
         }
     }
 
     search(term){
 
-        this.setState({ isLoading : true });
+       this.setState({ isLoading : true });
 
         WalmartAPI
             .search(term)

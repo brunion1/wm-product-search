@@ -32,15 +32,15 @@ class Details extends React.Component {
 
     componentDidMount(){
         //should pull fresh product data when component is loaded
-        if(this.props.match.params.itemId){
+        if(this.props.match.params.itemId){ //provided by react-router
             this.fetchData(this.props.match.params.itemId);
         }
     }
 
-    componentWillReceiveProps(nextProps){
+    componentDidUpdate(prevProps){
         //if new props are received, make sure we're not somehow looking at the same object
-        if(nextProps.match.params.itemId !== this.props.match.params.itemId) {
-            this.fetchData(nextProps.match.params.itemId);
+        if(prevProps.match.params.itemId !== this.props.match.params.itemId) {
+            this.fetchData(prevProps.match.params.itemId);
         }
     }
 
@@ -73,7 +73,7 @@ class Details extends React.Component {
                         </Row>
                         <Row>
                             <Col xs={10} sm={10} md={10} xs-offset={1} sm-offset={1} md-offset={1}>
-                                 <Image inline src={this.state.itemDetails.customerRatingImage}/> {this.state.itemDetails.customerRating} {this.state.itemDetails.numReviews} reviews
+                                <Image inline src={this.state.itemDetails.customerRatingImage}/> {this.state.itemDetails.customerRating} <a>{this.state.itemDetails.numReviews} reviews</a>
                             </Col>
                         </Row>
                     </Row>
@@ -81,11 +81,11 @@ class Details extends React.Component {
                         <Col xs={8} sm={8} md={4} lg={4} xl={4} xs-offset={2} sm-offset={2} md-offset={1} lg-offset={1} xl-offset={1} className="extra-margin">
                             <ImageSwitcher images={this.state.itemDetails.imageEntities}/>
                         </Col>
-                        <Col xs={12} sm={12} md={6} lg={4} xl={4} lg-offset={1} xl-offset={1}>
+                        <Col xs={12} sm={12} md={6} lg={5} xl={5} lg-offset={1} xl-offset={1}>
                             <Row className="extra-margin">
                                 <Col xs={12} sm={12} md={4} lg={4} xl={4}>
                                     <div className="mui--text-subhead">${this.state.itemDetails.salePrice}</div>
-                                    (was ${this.state.itemDetails.msrp} )
+                                    <div className="gray-text">(was ${this.state.itemDetails.msrp} )</div>
                                 </Col>
                                 <Col xs={12} sm={12} md={8} lg={8} xl={8}>
                                     <Button color="primary">Add To Cart</Button>

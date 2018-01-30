@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 // muicss components
@@ -46,14 +45,15 @@ class ItemSummary extends React.Component {
     }
 }
 
+// min-height: 300px;
+// .item-name{
+//     height: 140px;
+//     overflow: hidden;
+// }
+// `;
 
 ItemSummary.propTypes = {
     item : PropTypes.object.isRequired
 };
 
-export default styled(ItemSummary)`
-  min-height: 300px;
-  .item-name{
-    min-height: 140px;
-  }
-`;
+export default ItemSummary;

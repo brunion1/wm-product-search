@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 // muicss components
 import Container from 'muicss/lib/react/container';
@@ -72,12 +71,3 @@ class Recommendations extends React.Component {
 }
 
 export default Recommendations;
-
-//
-// {this.state.noValidItems && !this.state.isLoading ?
-//
-//                     :
-//                     <Col xs={12} sm={12} md={8} lg={8} lg-offset={2} md-offset={2}>
-//                         Sorry, no recommendations available for this item.
-//                     </Col>
-//                     }

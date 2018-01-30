@@ -21,7 +21,6 @@ class WalmartAPI {
                     }
                 }, error => {
                     reject();
-                    console.log(error);
                 });
         });
     }
@@ -37,7 +36,6 @@ class WalmartAPI {
                     }
                 }, error =>{
                     reject();
-                    console.log(error);
                 });
         });
 
@@ -59,7 +57,6 @@ class WalmartAPI {
                     }
                 }, error => {
                     reject();
-                    console.log(error);
                 });
         });
     }

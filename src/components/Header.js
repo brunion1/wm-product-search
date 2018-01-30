@@ -1,25 +1,20 @@
 //core react stuff
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 
 //history util
 import history from '../utils/history';
 
 //muicss components
 import Form from 'muicss/lib/react/form';
-import Container from 'muicss/lib/react/container'
-import Appbar from 'muicss/lib/react/appbar';
 import Col from 'muicss/lib/react/col';
 import Row from 'muicss/lib/react/row';
 import Input from 'muicss/lib/react/input';
-import Button from 'muicss/lib/react/button';
 
 //custom components
 import Image from './Image';
 
 //assets
- import logo from '../images/walmart.png';
+import logo from '../images/walmart.png';
 
 class Header extends Component {
     constructor(props){

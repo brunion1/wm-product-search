@@ -47,7 +47,7 @@ class ImageSwitcher extends React.Component {
             images.push(primary);
 
             //pull 3 secondary images from the stack
-            for(var image of nextProps.images){
+            for(let image of nextProps.images){
                 if(image !== primary){
                     images.push(image);
                 }
@@ -73,7 +73,7 @@ class ImageSwitcher extends React.Component {
     render(){
         return(
             <Container>
-                <Row>
+                <Row className="extra-margin">
                     <Image fullwidth src={this.state.activeImage.largeImage}/>
                 </Row>
                 <Row className="extra-margin">
