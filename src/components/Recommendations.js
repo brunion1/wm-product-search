@@ -57,7 +57,7 @@ class Recommendations extends React.Component {
                     {!this.state.isLoading ?
                         <Carousel>
                             {this.state.recommendedItems.map((item, index) => {
-                                return(<Col xs={10} sm={10} md={6} lg={3} xl={3} key={item.itemId}>
+                                return(<Col xs={10} sm={10} md={6} lg={4} xl={4} key={item.itemId}>
                                     <ItemSummary item={item}/>
                                 </Col>);
                             })}

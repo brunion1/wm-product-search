@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
+//history util
+import history from '../utils/history';
+
 //muicss components
 import Form from 'muicss/lib/react/form';
 import Container from 'muicss/lib/react/container'
@@ -16,7 +19,7 @@ import Button from 'muicss/lib/react/button';
 import Image from './Image';
 
 //assets
-import logo from '../images/walmart.png';
+ import logo from '../images/walmart.png';
 
 class Header extends Component {
     constructor(props){
@@ -34,7 +37,7 @@ class Header extends Component {
 
     onSubmit(event){
         event.preventDefault();  // prevent form submission
-        this.props.onSearch(this.state.searchString);
+        history.push("/search/" + this.state.searchString);
     }
 
     onChange(event){
@@ -43,38 +46,22 @@ class Header extends Component {
 
     render() {
         return (
-            <Appbar>
-                <Container>
-                        {this.props.searchMode ?
-                            <Row>
-                                <Col xs={10} sm={10} md={6} lg={6} xs-offset={1} sm-offset={1} md-offset={3} lg-offset={3}>
-                                    <Form onSubmit={this.onSubmit}>
-                                        <Input placeholder="Search for a product..."
-                                               onChange={this.onChange}
-                                               value={this.state.searchString}/>
-                                    </Form>
-                                </Col>
-                            </Row>
-                            :
-                            <Row>
-                                <Col xs={2} sm={2} md={2} lg={2} xl={2}>
-                                    <Link to={"/"}><Button variant="flat" >Back</Button></Link>
-                                </Col>
-                                <Col xs={8} sm={8} md={8} lg={8} xl={8}>
-                                    <div>{this.props.headerText}</div>
-                                </Col>
-                            </Row>
-                            }
-                </Container>
-            </Appbar>
+            <div className={this.props.className}>
+                <Row className="extra-margin">
+                    <Col xs={8} sm={8} md={3} lg={3} xs-offset={2} sm-offset={1}>
+                        <Image src={logo} fullwidth inline/>
+                    </Col>
+                    <Col xs={10} sm={10} md={4} lg={4} xs-offset={1} sm-offset={1} md-offset={3} lg-offset={3}>
+                        <Form onSubmit={this.onSubmit}>
+                            <Input placeholder="Search for a product..."
+                                   onChange={this.onChange}
+                                   value={this.state.searchString}/>
+                        </Form>
+                    </Col>
+                </Row>
+             </div>
         );
     }
 }
-
-Header.propTypes = {
-    onSearch : PropTypes.func,
-    headerText : PropTypes.string,
-    searchMode : PropTypes.bool
-};
 
 export default Header;

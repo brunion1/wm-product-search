@@ -7,15 +7,15 @@ import Row from 'muicss/lib/react/row';
 import Button from 'muicss/lib/react/button';
 
 //api
-import WalmartAPI from '../../api/walmart.api.js';
+import WalmartAPI from '../api/walmart.api.js';
 
 //internal components
-import ImageSwitcher from '../../components/ImageSwitcher';
-import Image from '../../components/Image';
-import Header from '../../components/Header';
-import Recommendations from '../../components/Recommendations';
-import LoadingSpinner from '../../components/LoadingSpinner';
-import Divider from '../../components/Divider';
+import ImageSwitcher from '../components/ImageSwitcher';
+import Image from '../components/Image';
+import Header from '../components/Header';
+import Recommendations from '../components/Recommendations';
+import LoadingSpinner from '../components/LoadingSpinner';
+import Divider from '../components/Divider';
 
 class Details extends React.Component {
     constructor(props){
@@ -73,7 +73,7 @@ class Details extends React.Component {
                         </Row>
                         <Row>
                             <Col xs={10} sm={10} md={10} xs-offset={1} sm-offset={1} md-offset={1}>
-                                 <Image src={this.state.itemDetails.customerRatingImage}/> {this.state.itemDetails.customerRating} {this.state.itemDetails.numReviews} reviews
+                                 <Image inline src={this.state.itemDetails.customerRatingImage}/> {this.state.itemDetails.customerRating} {this.state.itemDetails.numReviews} reviews
                             </Col>
                         </Row>
                     </Row>
@@ -84,8 +84,8 @@ class Details extends React.Component {
                         <Col xs={12} sm={12} md={6} lg={4} xl={4} lg-offset={1} xl-offset={1}>
                             <Row className="extra-margin">
                                 <Col xs={12} sm={12} md={4} lg={4} xl={4}>
-                                    <div className="mui--text-subhead">{this.state.itemDetails.salePrice}</div>
-                                    {this.state.itemDetails.msrp}
+                                    <div className="mui--text-subhead">${this.state.itemDetails.salePrice}</div>
+                                    (was ${this.state.itemDetails.msrp} )
                                 </Col>
                                 <Col xs={12} sm={12} md={8} lg={8} xl={8}>
                                     <Button color="primary">Add To Cart</Button>

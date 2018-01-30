@@ -13,8 +13,11 @@ class WalmartAPI {
         return new Promise((resolve, reject) => {
             axios
                 .get(url).then( response => {
-                    if(response.data && response.data){
+                    if(response.data && response.data && response.data.items){
                         resolve(response.data.items);
+                    }
+                    else{
+                        reject();
                     }
                 }, error => {
                     reject();

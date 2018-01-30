@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 // muicss components
 import Container from 'muicss/lib/react/container';
@@ -11,28 +12,36 @@ import Col from 'muicss/lib/react/col';
 // custom components
 import Image from './Image';
 
+import history from '../utils/history';
+
 class ItemSummary extends React.Component {
     constructor(props){
         super(props);
+
+        this.viewItem = this.viewItem.bind(this);
+    }
+
+    viewItem(){
+        history.push('/details/' + this.props.item.itemId);
     }
 
     render(){
         return(
-                <Panel>
-                    <Link to={'/details/'+ this.props.item.itemId}>
-                        <Container>
-                            <Row>
-                                <div>{this.props.item.name}</div>
-                            </Row>
-                            <Row>
-                                <Image src={this.props.item.customerRatingImage}/>${this.props.item.salePrice}
-                            </Row>
-                            <Row>
-                                <Image fullwidth src={this.props.item.mediumImage}/>
-                            </Row>
-                        </Container>
-                    </Link>
-                </Panel>
+            <Panel onClick={this.viewItem} className={this.props.className}>
+                <Container>
+                    <Row className="extra-margin item-name">
+                        <Col xs={12} sm={12} md={12} lg={12} xl={12} className="mui--text-subhead">
+                            {this.props.item.name}
+                        </Col>
+                        <Col xs={12} sm={12} md={12} lg={12} xl={12}>
+                            <Image src={this.props.item.customerRatingImage} inline/> ${this.props.item.salePrice}
+                        </Col>
+                    </Row>
+                    <Row className="extra-margin">
+                        <Image fullwidth src={this.props.item.mediumImage}/>
+                    </Row>
+                </Container>
+            </Panel>
         )
     }
 }
@@ -42,12 +51,9 @@ ItemSummary.propTypes = {
     item : PropTypes.object.isRequired
 };
 
-export default ItemSummary;
-
-
-/*
-                    <Row className="mui--hidden-xs mui--hidden-sm">
-                        {this.props.item.shortDescription}
-                    </Row>
-
- */
+export default styled(ItemSummary)`
+  min-height: 300px;
+  .item-name{
+    min-height: 140px;
+  }
+`;

@@ -9,6 +9,10 @@ import Col from 'muicss/lib/react/col';
 // custom components
 import Image from './Image';
 
+/*
+    Component that allows the user to toggle between four images.
+ */
+
 class ImageSwitcher extends React.Component {
     constructor(props){
         super(props);
@@ -72,10 +76,10 @@ class ImageSwitcher extends React.Component {
                 <Row>
                     <Image fullwidth src={this.state.activeImage.largeImage}/>
                 </Row>
-                <Row>
+                <Row className="extra-margin">
                     {this.state.images.map((image, index)=> {
                         return (
-                            <Col xs={3} sm={3} md={3} lg={3} xl={3} key={index} >
+                            <Col xs={3} sm={3} md={3} lg={3} xl={3} key={index}>
                                 <Image src={image.thumbnailImage} onClick={()=>{this.viewImage(image)}}/>
                             </Col>
                         )
