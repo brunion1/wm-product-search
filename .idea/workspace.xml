@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b335b016-8f20-4019-b811-49248addbb6a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/containers/App.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/api/walmart.api.js" afterPath="$PROJECT_DIR$/src/api/walmart.api.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Carousel.js" afterPath="$PROJECT_DIR$/src/components/Carousel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Divider.js" afterPath="$PROJECT_DIR$/src/components/Divider.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Header.js" afterPath="$PROJECT_DIR$/src/components/Header.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Image.js" afterPath="$PROJECT_DIR$/src/components/Image.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/ImageSwitcher.js" afterPath="$PROJECT_DIR$/src/components/ImageSwitcher.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/ItemSummary.js" afterPath="$PROJECT_DIR$/src/components/ItemSummary.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/LoadingSpinner.js" afterPath="$PROJECT_DIR$/src/components/LoadingSpinner.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Recommendations.js" afterPath="$PROJECT_DIR$/src/components/Recommendations.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Details.js" afterPath="$PROJECT_DIR$/src/containers/Details.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Search.js" afterPath="$PROJECT_DIR$/src/containers/Search.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Search.test.js" afterPath="$PROJECT_DIR$/src/containers/Search.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/app.scss" afterPath="$PROJECT_DIR$/src/styles/app.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yarn.lock" afterPath="$PROJECT_DIR$/yarn.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -45,6 +28,26 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Header.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Header.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="410">
+              <caret line="46" column="55" lean-forward="false" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ImageSwitcher.test.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/ImageSwitcher.test.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -58,34 +61,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageSwitcher.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/ImageSwitcher.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1170">
-              <caret line="81" column="32" lean-forward="false" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoadingSpinner.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/LoadingSpinner.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="12" column="2" lean-forward="true" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-              <folding>
-                <marker date="1517339006352" expanded="true" signature="339:470" ph="{...}" />
-                <marker date="1517339006352" expanded="true" signature="339:471" ph="{...}" />
-                <marker date="1517339006352" expanded="true" signature="444:470" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Search.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/Search.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
+            <state relative-caret-position="-290">
               <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -106,7 +85,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Recommendations.test.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Recommendations.test.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Recommendations.test.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="290">
@@ -128,10 +107,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Details.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/Details.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
+            <state relative-caret-position="677">
               <caret line="59" column="15" lean-forward="false" selection-start-line="59" selection-start-column="15" selection-end-line="59" selection-end-column="15" />
               <folding />
             </state>
@@ -184,7 +173,6 @@
         <option value="$PROJECT_DIR$/config/webpack.config.dev.js" />
         <option value="$PROJECT_DIR$/src/index.scss" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/components/Padding.js" />
         <option value="$PROJECT_DIR$/src/styles/walmart-colors.scss" />
         <option value="$PROJECT_DIR$/src/containers/Search/Search.js" />
@@ -210,6 +198,7 @@
         <option value="$PROJECT_DIR$/src/components/ItemSummary.js" />
         <option value="$PROJECT_DIR$/src/components/ItemSummary.test.js" />
         <option value="$PROJECT_DIR$/src/components/Recommendations.test.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -261,11 +250,6 @@
               <item name="wm-product-search" type="b2602c69:ProjectViewProjectNode" />
               <item name="wm-product-search" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="wm-product-search" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wm-product-search" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -314,12 +298,12 @@
       <workItem from="1516890328142" duration="63166000" />
       <workItem from="1517337411615" duration="4387000" />
       <workItem from="1517343159177" duration="5054000" />
-      <workItem from="1517348435124" duration="2911000" />
+      <workItem from="1517348435124" duration="3311000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75518000" />
+    <option name="totallyTimeSpent" value="75918000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="798" extended-state="6" />
@@ -400,17 +384,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.scss" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="12" lean-forward="false" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/walmart-colors.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
           <caret line="1276" column="27" lean-forward="false" selection-start-line="1276" selection-start-column="21" selection-end-line="1276" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -563,13 +541,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="46" column="55" lean-forward="false" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Image.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -579,32 +550,6 @@
             <marker date="1517328719369" expanded="true" signature="66:254" ph="{...}" />
             <marker date="1517328719369" expanded="true" signature="131:254" ph="{...}" />
             <marker date="1517328719369" expanded="true" signature="195:254" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="44" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/Details.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="59" column="15" lean-forward="false" selection-start-line="59" selection-start-column="15" selection-end-line="59" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/Search.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -645,8 +590,8 @@
         <state relative-caret-position="690">
           <caret line="46" column="7" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#227#267#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
+            <element signature="e#227#267#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -687,6 +632,48 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/Search.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-290">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/Details.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="677">
+          <caret line="59" column="15" lean-forward="false" selection-start-line="59" selection-start-column="15" selection-end-line="59" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="46" column="55" lean-forward="false" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
