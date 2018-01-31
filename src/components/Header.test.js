@@ -28,15 +28,12 @@ describe('<Header>', () => {
     });
 
     it('should invoke the history.push function upon form submission ', () => {
-        var fakeEvent = {
-            preventDefault : ()=>{}
-        };
         var wrapper = mount(<Header/>);
         var form = wrapper.find('form');
 
         expect(history.push.calledOnce).toBe(false);
 
-        form.simulate('submit', fakeEvent);
+        form.simulate('submit');
 
         expect(history.push.calledOnce).toBe(true);
     });
