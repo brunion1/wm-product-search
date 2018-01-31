@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 
+//api info
 import WalmartAPI from '../api/walmart.api.js';
 
+//third party components
 import Container from 'muicss/lib/react/container';
 import Row from 'muicss/lib/react/row';
 import Col from 'muicss/lib/react/col';
 
+//custom components
 import Header from '../components/Header';
 import ItemSummary from '../components/ItemSummary';
 import LoadingSpinner from '../components/LoadingSpinner';
@@ -39,7 +42,10 @@ class Search extends Component {
 
     search(term){
 
-       this.setState({ isLoading : true });
+       this.setState({
+           isLoading : true,
+           searchResults : []
+       });
 
         WalmartAPI
             .search(term)
@@ -66,21 +72,24 @@ class Search extends Component {
         return (
             <div>
                 <Header onSearch={this.search} searchMode={true}/>
+                <LoadingSpinner visible={this.state.isLoading}/>
                 <Container className="extra-margin">
                     <Row>
+
                         {this.state.searchResults.map(item => {
                             return (<Col xs={12} sm={12} md={6} lg={4}>
                                 <ItemSummary item={item} key={item.itemId}/>
                             </Col>)
                         })}
-                        {this.state.noResults ?
-                            <Col xs={12} sm={12} md={8} lg={8} sm-offset={2} lg-offset={2} className="mui--text-center extra-margin">
+
+                        {this.state.noResults && !this.state.isLoading ?
+                            <Col xs={12} sm={12} md={8} lg={8} md-offset={2} lg-offset={2} className="mui--text-center extra-margin">
                                 Sorry, no results for that item. Try searching for something else
                             </Col>
                             : null
                         }
+
                     </Row>
-                    <LoadingSpinner visible={this.state.isLoading}/>
                 </Container>
             </div>
         );

@@ -8,7 +8,7 @@ import registerServiceWorker from './registerServiceWorker'; //create-react-app 
 
 //our two views
 import Search from './containers/Search'; //allows for searching and displays a tiled list of results
-import Details from './containers/Details'; //displays detailed item info and recommendations
+import Item from './containers/Item'; //displays detailed item info and recommendations
 
 //for allowing us to manipulate the history object anywhere
 import history from './utils/history';
@@ -21,7 +21,7 @@ class App extends React.Component {
                     <Switch>
                         <Route exact path='/' component={Search}/>
                         <Route path='/search/:searchTerm' component={Search}/>
-                        <Route path='/details/:itemId?' component={Details}/>
+                        <Route path='/details/:itemId?' component={Item}/>
                     </Switch>
                 </Router>
             </div>

@@ -21,6 +21,7 @@ class ItemSummary extends React.Component {
     }
 
     viewItem(){
+        //reroutes to the details view
         history.push('/details/' + this.props.item.itemId);
     }
 
@@ -44,13 +45,6 @@ class ItemSummary extends React.Component {
         )
     }
 }
-
-// min-height: 300px;
-// .item-name{
-//     height: 140px;
-//     overflow: hidden;
-// }
-// `;
 
 ItemSummary.propTypes = {
     item : PropTypes.object.isRequired
