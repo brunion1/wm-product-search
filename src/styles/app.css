@@ -10,3 +10,9 @@ a {
 
 .gray-text {
   color: lightgray; }
+
+.item {
+  min-height: 300px; }
+  .item .item-name {
+    height: 140px;
+    overflow: hidden; }
