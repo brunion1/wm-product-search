@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 // muicss components
 import Container from 'muicss/lib/react/container';
 import Row from 'muicss/lib/react/row';
@@ -25,14 +25,16 @@ class Recommendations extends React.Component {
     }
 
     componentWillReceiveProps(){
-        this.fetchRecommendations();
+        if(this.props.itemId){
+            this.fetchRecommendations(this.props.itemId);
+        }
     }
 
-    fetchRecommendations(){
+    fetchRecommendations(itemId){
         this.setState({ isLoading: true, recommendedItems : [] });
 
         WalmartAPI
-            .getRecommendations(this.props.itemId)
+            .getRecommendations(itemId)
             .then(recommendedItems => {
                 this.setState({
                     isLoading : false,
@@ -69,5 +71,9 @@ class Recommendations extends React.Component {
         )
     }
 }
+
+Recommendations.propTypes = {
+    itemId : PropTypes.number
+};
 
 export default Recommendations;

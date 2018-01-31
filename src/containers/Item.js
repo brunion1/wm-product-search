@@ -9,7 +9,7 @@ import Recommendations from '../components/Recommendations';
 import LoadingSpinner from '../components/LoadingSpinner';
 import ItemDetails from '../components/ItemDetails';
 
-class Details extends React.Component {
+class Item extends React.Component {
     constructor(props){
         super(props);
 
@@ -71,6 +71,4 @@ class Details extends React.Component {
     }
 }
 
-//may need to make recommendations a prop again
-
-export default Details;
+export default Item;
