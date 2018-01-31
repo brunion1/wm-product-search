@@ -5,11 +5,7 @@ It uses React, MUICSS, and the style-components library, plus Axios for service 
 
 ## Getting Started
 
-To start the app, just clone the Github repository into your local, navigate into the repository root, and issue the following commands:
-
-### Installing
-
-Assuming you have NodeJS and yarn/npm installed, issue the following commands to build and run the app:
+Assuming you have NodeJS and yarn/npm installed, the following commands will pull and load the app:
 
 ```
 git clone https://github.com/brunion1/wm-product-search.git
