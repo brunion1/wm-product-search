@@ -5,33 +5,21 @@ It uses React, MUICSS, and the style-components library, plus Axios for service 
 
 ## Getting Started
 
-
-
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+To start the app, just clone the Github repository into your local, navigate into the repository root, and issue the following commands:
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
+Assuming you have NodeJS and yarn/npm installed, issue the following commands to build and run the app:
 
 ```
-Give the example
-```
+git clone https://github.com/brunion1/wm-product-search.git
 
-And repeat
+cd wm-product-search
 
-```
-until finished
-```
+yarn install
 
-End with an example of getting some data out of the system or using it for a little demo
+yarn start
+```
 
 ## Running the tests
 
