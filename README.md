@@ -12,29 +12,17 @@ git clone https://github.com/brunion1/wm-product-search.git
 
 cd wm-product-search
 
-yarn install
+yarn/npm install
 
-yarn start
+yarn/npm start
 ```
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+To run the tests, run the following:
 
 ```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
+yarn test
 ```
 
 ## Built With
