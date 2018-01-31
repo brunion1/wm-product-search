@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 
 //third party components
@@ -54,7 +55,7 @@ ItemDetails.propTypes = {
     imageEntities : PropTypes.array,
     salePrice : PropTypes.number,
     msrp : PropTypes.number,
-    shortDescription : PropTypes.shortDescription,
+    shortDescription : PropTypes.string,
     customerRatingImage: PropTypes.string,
     customerRating : PropTypes.string,
     numReviews : PropTypes.number,

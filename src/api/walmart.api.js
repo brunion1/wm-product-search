@@ -1,14 +1,15 @@
 import axios from 'axios';
+import { apiKey } from '../config/config';
+
 /*
     Contains the Walmart APIs for searching, getting detailed info, and recommendations.
     Also allows for some minor error handling and ensuring that Axios doesn't send back
     anything but the data we need in our components.
  */
-class WalmartAPI {
-    apiKey = "gy2n8uu9mu5ndzwbedv4k8kk";
 
+class WalmartAPI {
     search(query){
-        let url = `https://api.walmartlabs.com/v1/search?apiKey=${this.apiKey}&query=${query}`;
+        let url = `https://api.walmartlabs.com/v1/search?apiKey=${apiKey}&query=${query}`;
 
         return new Promise((resolve, reject) => {
             axios
@@ -26,7 +27,7 @@ class WalmartAPI {
     }
 
     getDetails(itemID){
-        let url = `https://api.walmartlabs.com/v1/items/${itemID}?apiKey=${this.apiKey}&format=json`;
+        let url = `https://api.walmartlabs.com/v1/items/${itemID}?apiKey=${apiKey}&format=json`;
         
         return new Promise((resolve, reject) => {
             axios
@@ -42,7 +43,7 @@ class WalmartAPI {
     }
 
     getRecommendations(itemID){
-        let url = `https://api.walmartlabs.com/v1/nbp?apiKey=${this.apiKey}&itemId=${itemID}`;
+        let url = `https://api.walmartlabs.com/v1/nbp?apiKey=${apiKey}&itemId=${itemID}`;
         
         return new Promise((resolve, reject) => {
             axios
@@ -62,4 +63,4 @@ class WalmartAPI {
     }
 }
 
-export default new WalmartAPI();
+export default WalmartAPI;

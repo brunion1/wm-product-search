@@ -52,4 +52,5 @@ describe('<ItemSummary>', () => {
         wrapper.simulate('click');
         expect(viewItem.calledOnce).toEqual(true);
     });
+
 });

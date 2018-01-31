@@ -13,6 +13,8 @@ import Header from '../components/Header';
 import ItemSummary from '../components/ItemSummary';
 import LoadingSpinner from '../components/LoadingSpinner';
 
+const walmartAPI = new WalmartAPI();
+
 class Search extends Component {
     constructor(props){
         super(props);
@@ -47,7 +49,7 @@ class Search extends Component {
            searchResults : []
        });
 
-        WalmartAPI
+        walmartAPI
             .search(term)
             .then(results => {
 

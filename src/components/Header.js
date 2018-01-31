@@ -50,6 +50,7 @@ class Header extends Component {
                         <Form onSubmit={this.onSubmit}>
                             <Input placeholder="Search for a product..."
                                    onChange={this.onChange}
+                                   name="search"
                                    value={this.state.searchString}/>
                         </Form>
                     </Col>

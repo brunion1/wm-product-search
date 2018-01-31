@@ -1,15 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 // muicss components
 import Container from 'muicss/lib/react/container';
 import Row from 'muicss/lib/react/row';
 import Col from 'muicss/lib/react/col';
 
+//api
 import WalmartAPI from '../api/walmart.api.js';
 
+//custom components
 import Carousel from './Carousel';
 import ItemSummary from './ItemSummary';
 import LoadingSpinner from './LoadingSpinner';
+
+const walmartAPI = new WalmartAPI();
 
 class Recommendations extends React.Component {
     constructor(props){
@@ -33,7 +38,7 @@ class Recommendations extends React.Component {
     fetchRecommendations(itemId){
         this.setState({ isLoading: true, recommendedItems : [] });
 
-        WalmartAPI
+        walmartAPI
             .getRecommendations(itemId)
             .then(recommendedItems => {
                 this.setState({

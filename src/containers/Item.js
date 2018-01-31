@@ -9,6 +9,8 @@ import Recommendations from '../components/Recommendations';
 import LoadingSpinner from '../components/LoadingSpinner';
 import ItemDetails from '../components/ItemDetails';
 
+const walmartAPI = new WalmartAPI();
+
 class Item extends React.Component {
     constructor(props){
         super(props);
@@ -40,7 +42,7 @@ class Item extends React.Component {
             isLoading : true
         });
 
-        WalmartAPI
+        walmartAPI
             .getDetails(itemId)
             .then(itemDetails => {
                 this.setState({
