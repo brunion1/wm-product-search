@@ -1,10 +1,11 @@
-# Project Title
+# Product Search App
 
-One Paragraph of project description goes here
+This is a responsive product search and recommendations app utilizing the Walmart search, recommendations, and item endpoints.
+It uses React, MUICSS, and the style-components library, plus Axios for service calls. Boilerplate was provided by create-react-app.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
 
 ### Prerequisites
 
@@ -52,36 +53,11 @@ Explain what these tests test and why
 Give an example
 ```
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+* [React](https://reactjs.org/) - JavaScript framework
+* [create-react-app](https://github.com/facebook/create-react-app) - Allows for fast react app creation with no build configuration
+* [Yarn](https://yarnpkg.com/en/) - For dependency management
+* [MuiCSS](https://www.muicss.com/docs/v1/react/introduction) - An awesome, lightweight flavor of Material with a robust set of React-compatible components
+* [styled-components](https://www.styled-components.com/docs/basicsax) - Library for building your own responsive, styled components without separate css files
+* [Axios](https://github.com/axios/axios) - Used for service calls
