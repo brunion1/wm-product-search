@@ -29,9 +29,9 @@ class Recommendations extends React.Component {
         }
     }
 
-    componentWillReceiveProps(){
-        if(this.props.itemId){
-            this.fetchRecommendations(this.props.itemId);
+    componentWillReceiveProps(nextProps){
+        if(nextProps.itemId){
+            this.fetchRecommendations(nextProps.itemId);
         }
     }
 

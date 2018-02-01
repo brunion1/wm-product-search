@@ -85,8 +85,8 @@ class Search extends Component {
                         })}
 
                         {this.state.noResults && !this.state.isLoading ?
-                            <Col xs={12} sm={12} md={8} lg={8} md-offset={2} lg-offset={2} className="mui--text-center extra-margin">
-                                Sorry, no results for that item. Try searching for something else
+                            <Col xs={12} sm={12} md={8} lg={8} md-offset={2} lg-offset={2} className="mui--text-center extra-margin mui--text-subhead">
+                                Sorry, no items were returned for that search. Please try again.
                             </Col>
                             : null
                         }

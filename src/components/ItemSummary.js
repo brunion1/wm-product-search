@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 
 // muicss components
 import Container from 'muicss/lib/react/container';

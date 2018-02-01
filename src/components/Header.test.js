@@ -7,7 +7,7 @@ import Adapter from 'enzyme-adapter-react-16';
 configure({ adapter: new Adapter() });
 
 import history from '../utils/history';
-const filterSpy = sinon.spy(history, 'push');
+sinon.spy(history, 'push');
 
 import Header from './Header';
 

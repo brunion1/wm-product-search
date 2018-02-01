@@ -17,6 +17,10 @@ yarn/npm install
 yarn/npm start
 ```
 
+In order to successfully make service calls, you'll need to supply your own API Key. Replace the empty string in src/config/config.js with one of your own.
+
+If you haven't already, you'll also need to enable CORS to run. As of January 31st, the app is also running at https://walmart-search-app.herokuapp.com/
+
 ## Running the tests
 
 To run the tests, run the following:
