@@ -26,8 +26,9 @@ If you haven't already, you'll also need to enable CORS to run. As of January 31
 To run the tests, run the following:
 
 ```
-yarn test
+yarn test a
 ```
+
 
 ## Built With
 
